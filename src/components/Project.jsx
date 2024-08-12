@@ -41,7 +41,7 @@ const Project = () => {
                 <p className="mb-12 p-4">{project.description}</p>
                 <div className=" flex gap-3">
                   <a
-                    href={project.githubLink}
+                    href={project.liveDemoLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-full bg-white px-4 py-2 text-black hover:bg-gray-300"

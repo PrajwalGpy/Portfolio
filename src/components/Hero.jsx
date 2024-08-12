@@ -1,6 +1,6 @@
 import React from "react";
 import { HERO } from "../constants";
-import carlImg from "../assets/carl.jpeg";
+import PGPImg from "../assets/enhanced-image (2).png";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -29,9 +29,10 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            src={carlImg}
-            width={550}
-            height={550}
+            src={PGPImg}
+            // 550
+            width={400}
+            height={400}
             alt="Prjawal Gopal Poojary Photo"
             className="rounded-3xl"
           />

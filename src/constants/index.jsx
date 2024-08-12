@@ -7,14 +7,22 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 
-import projectImage1 from "../assets/project1.jpeg";
-import projectImage2 from "../assets/project2.jpeg";
-import projectImage3 from "../assets/project3.jpeg";
+// import projectImage1 from "../assets/Youtubeclone.jpg";
+// import projectImage2 from "../assets/NeflixGpt.jpeg";
+// import projectImage3 from "../assets/food-delivery-apps-in-market.jpeg";
+import projectImage1 from "../assets/Youtubeclone.jpg";
+import projectImage2 from "../assets/NeflixGpt.jpg";
+import projectImage3 from "../assets/food-ordering-web-application.jpeg";
 import projectImage4 from "../assets/project4.jpeg";
 import projectImage5 from "../assets/project5.jpeg";
 import projectImage6 from "../assets/project6.jpeg";
 
 import { RiReactjsLine } from "react-icons/ri";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { TbBrandJavascript } from "react-icons/tb";
+import { SiRedux } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
@@ -25,13 +33,12 @@ export const NAVIGATION_LINKS = [
   { label: "Projects", href: "#projects" },
   { label: "Bio", href: "#bio" },
   { label: "Skills", href: "#skills" },
-  { label: "Work Experience", href: "#work" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const HERO = {
-  name: "CARL FRANK",
+  name: "PRAJWAL GOPAL POOJARY",
   greet: "Hello there! 👋🏻",
   description:
     "I am a passionate frontend developer with a knack for creating beautiful and functional user interfaces. I like transforming ideas into engaging web experiences for over a decade.",
@@ -40,51 +47,30 @@ export const HERO = {
 export const PROJECTS = [
   {
     id: 1,
-    name: "Personal Portfolio",
+    name: "YouTube Clone",
     description:
-      "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects, and contact information.",
+      "A YouTube clone built with React, Redux, and Tailwind CSS, featuring real-time video data from the YouTube API, a Reddit-like comment section, debounced search results, and live chat functionality.",
     image: projectImage1,
-    githubLink: "https://github.com/user/personal-portfolio",
+    githubLink: "https://github.com/PrajwalGpy/youtube",
+    liveDemoLink: "https://youtubeclone88.netlify.app/",
   },
   {
     id: 2,
-    name: "E-Commerce Platform",
+    name: "Netflix GPT Movie App",
     description:
-      "An e-commerce web application developed using Next.js and Stripe for payment integration, featuring a comprehensive product catalog, shopping cart, and checkout system.",
+      "A Netflix-like movie app with GPT-powered movie information and real-time data from the TMDb API, featuring full user authentication and responsive design.",
     image: projectImage2,
-    githubLink: "https://github.com/user/ecommerce-platform",
+    githubLink: "https://github.com/PrajwalGpy/netflixGpt",
+    liveDemoLink: "https://moviemane.netlify.app/",
   },
   {
     id: 3,
-    name: "Task Management Tool",
+    name: "FoodFly - Food Ordering Web App",
     description:
-      "A task management application built with React and Redux for efficient task tracking and team collaboration, including features like project boards, task assignment, and progress tracking.",
+      "A food ordering web app built with React and Tailwind CSS, featuring menu browsing and cart functionality.",
     image: projectImage3,
-    githubLink: "https://github.com/user/task-management-tool",
-  },
-  {
-    id: 4,
-    name: "Weather App",
-    description:
-      "A weather application that uses the OpenWeatherMap API to fetch and display current weather data and forecasts for various locations, built with React and styled-components.",
-    image: projectImage4,
-    githubLink: "https://github.com/user/weather-app",
-  },
-  {
-    id: 5,
-    name: "Blog Platform",
-    description:
-      "A blogging platform developed with Next.js and Markdown for creating, editing, and publishing blog posts. It features a rich text editor, tag system, and user authentication.",
-    image: projectImage5,
-    githubLink: "https://github.com/user/blog-platform",
-  },
-  {
-    id: 6,
-    name: "Chat Application",
-    description:
-      "A real-time chat application using Firebase for backend services, including user authentication, chat rooms, and instant messaging features. Built with React and Firebase.",
-    image: projectImage6,
-    githubLink: "https://github.com/user/chat-application",
+    githubLink: "https://github.com/PrajwalGpy/FoodFly",
+    liveDemoLink: "https://foodfly2.netlify.app/",
   },
 ];
 
@@ -96,101 +82,69 @@ export const BIO = [
 
 export const SKILLS = [
   {
-    icon: <RiReactjsLine className="text-4xl text-cyan-400 lg:text-5xl" />,
+    icon: <FaHtml5 className="text-4xl text-orange-500 lg:text-5xl" />,
+    name: "HTML5",
+    experience: "2+ years",
+  },
+  {
+    icon: <FaCss3Alt className="text-4xl text-blue-500 lg:text-5xl" />,
+    name: "CSS3",
+    experience: "2+ years",
+  },
+  {
+    icon: (
+      <TbBrandJavascript className="text-4xl text-yellow-300 lg:text-5xl" />
+    ),
+    name: "JavaScript",
+    experience: "2+ years",
+  },
+  {
+    icon: <RiReactjsLine className="text-4xl text-blue-400 lg:text-5xl" />,
     name: "React",
-    experience: "2+ years",
+    experience: "1+ years",
   },
   {
-    icon: <TbBrandNextjs className="text-4xl text-white lg:text-5xl" />,
-    name: "Next.js",
-    experience: "1+ year",
+    icon: <SiRedux className="text-4xl text-purple-700 lg:text-5xl" />,
+    name: "Redux",
+    experience: "1+ years",
   },
   {
-    icon: <SiMongodb className="text-4xl text-green-600 lg:text-5xl" />,
-    name: "MongoDB",
-    experience: "1.5+ years",
-  },
-  {
-    icon: <DiRedis className="text-4xl text-red-600 lg:text-5xl" />,
-    name: "Redis",
-    experience: "1+ year",
-  },
-  {
-    icon: <FaNodeJs className="text-4xl text-green-600 lg:text-5xl" />,
-    name: "Node.js",
-    experience: "2+ years",
-  },
-  {
-    icon: <BiLogoPostgresql className="text-4xl text-sky-700 lg:text-5xl" />,
-    name: "PostgreSQL",
-    experience: "1+ year",
-  },
-];
-
-export const EXPERIENCES = [
-  {
-    title: "Lead Frontend Developer",
-    company: "Innovative Tech Solutions",
-    duration: "July 2020 - Present",
-    description:
-      "As the Lead Frontend Developer, I spearheaded the development of advanced web applications using cutting-edge technologies like React, Redux, and TypeScript. I worked closely with cross-functional teams, including designers, product managers, and backend developers, to deliver seamless and high-performance user experiences.",
-  },
-  {
-    title: "Frontend Engineer",
-    company: "Digital Creations",
-    duration: "February 2016 - June 2020",
-    description:
-      "At Digital Creations, I focused on building highly interactive and responsive web interfaces using HTML, CSS, JavaScript, and modern libraries like React. I collaborated closely with UX/UI designers to implement design changes that enhanced user engagement and satisfaction. My role involved optimizing website performance, ensuring cross-browser compatibility, and implementing SEO best practices. ",
-  },
-  {
-    title: "Junior Web Developer",
-    company: "Bright Future Technologies",
-    duration: "August 2014 - January 2016",
-    description:
-      "In my role as a Junior Web Developer, I assisted in the development and maintenance of various web applications. I gained hands-on experience in utilizing HTML, CSS, and JavaScript to create user-friendly interfaces. I actively participated in team meetings, contributed to project planning, and collaborated with senior developers to implement new features.",
+    icon: <RiTailwindCssFill className="text-4xl text-sky-700 lg:text-5xl" />,
+    name: "Tailwind CSS",
+    experience: "1+ years",
   },
 ];
 
 export const EDUCATION = [
   {
-    degree: "Master of Science in Computer Science",
-    institution: "Stanford University",
-    duration: "September 2012 - June 2014",
+    degree: "Bachelor of Computer Application (BCA) ",
+    institution:
+      "Bhandarkar’s Arts and Science college , Mangalore University , Kundapura",
+    duration: "September 2021  June 2024",
     description:
-      "Specialized in Human-Computer Interaction and Software Engineering. Completed a thesis on enhancing user experience in web applications through advanced interactive techniques. Participated in various projects involving frontend development, algorithms, and data structures. Graduated with honors.",
-  },
-  {
-    degree: "Bachelor of Science in Information Technology",
-    institution: "University of California, Berkeley",
-    duration: "September 2008 - June 2012",
-    description:
-      "Focused on web development, programming languages, and database management. Actively involved in coding clubs and hackathons, where I developed several web applications using HTML, CSS, JavaScript, and PHP. Completed a senior project on developing an e-commerce platform. Graduated with a high GPA.",
+      "Focused on web development, programming languages, and database management. Actively involved in coding clubs and hackathons, where I developed several web applications using HTML, CSS, JavaScript, and PHP. Completed a senior project on developing an Food ordering Web app. Graduated with a high GPA.",
   },
 ];
 
 export const SOCIAL_MEDIA_LINKS = [
   {
-    href: "https://x.com/",
-    icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
-  },
-  {
-    href: "https://x.com/",
+    href: "https://discord.com/users/1079648331170582588",
     icon: <FaDiscord fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://x.com/",
+    href: "https://www.instagram.com/sollcriper/",
     icon: <FaInstagram fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://x.com/",
+    href: "https://x.com/prajwalgpa",
     icon: <FaXTwitter fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://github.com/",
+    href: "https://github.com/PrajwalGpy",
     icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/prajwal-gopal-poojary/",
     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
   },
 ];
