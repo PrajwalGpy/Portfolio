@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import { BiSend } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -70,7 +71,12 @@ function Contact() {
       <h2 className="my-8 text-center text-4xl font-semibold tracking-tighter">
         Let's Connect
       </h2>
-      <form onSubmit={handleSubmit}>
+      <motion.form
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.7 }}
+        onSubmit={handleSubmit}
+      >
         <div className="mb-4 flex space-x-4">
           <div className="lg:w-1/2">
             <input
@@ -83,7 +89,13 @@ function Contact() {
               className="mb-8 w-full appearance-none border border-stone-50/30 rounded-lg py-2 px-3 text-stone-50/30 bg-transparent focus:border-stone-50/30 focus:outline-none focus:border-stone-400"
             />
             {errors.name && (
-              <p className="text-rose-800 text-sm">{errors.name}</p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="text-rose-800 text-sm"
+              >
+                {errors.name}
+              </motion.p>
             )}
           </div>
           <div className="lg:w-1/2">
@@ -97,7 +109,13 @@ function Contact() {
               className="mb-8 w-full appearance-none border border-stone-50/30 rounded-lg py-2 px-3 text-stone-50/30 bg-transparent focus:border-stone-50/30 focus:outline-none focus:border-stone-400"
             />
             {errors.email && (
-              <p className="text-rose-800 text-sm">{errors.email}</p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="text-rose-800 text-sm"
+              >
+                {errors.email}
+              </motion.p>
             )}
           </div>
         </div>
@@ -112,7 +130,13 @@ function Contact() {
             rows="6"
           />
           {errors.message && (
-            <p className="text-rose-800 text-sm">{errors.message}</p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="text-rose-800 text-sm"
+            >
+              {errors.message}
+            </motion.p>
           )}
         </div>
         <button
@@ -127,7 +151,7 @@ function Contact() {
             <BiSend />
           </div>
         </button>
-      </form>
+      </motion.form>
     </div>
   );
 }
